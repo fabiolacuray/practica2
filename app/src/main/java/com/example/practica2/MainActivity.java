@@ -2,7 +2,9 @@ package com.example.practica2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -41,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
         mostrar.setEnabled(false);
 
 
+
+    }
+
+
+    public void clickSiguiente (View view){
+/// mostar un actividada pasar a otra actividad
+        Intent intent = new Intent(this, segundoActivity.class);
+        this.startActivity(intent);
 
     }
 
