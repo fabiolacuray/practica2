@@ -2,7 +2,11 @@ package com.example.practica2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -43,8 +47,42 @@ public class terceroActivity extends AppCompatActivity {
         nombre.setText(nombr);
         base.setText(bas);
 
+        factorial.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(charSequence.toString().equals("")){
+                    cerrar.setEnabled(false);
+                }else{
+                    cerrar.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(editable.toString().equals("")){
+                    cerrar.setEnabled(false);
+                }else{
+                    cerrar.setEnabled(true);
+                }
+            }
+        });
+
 
     }
+
+
+    public void OnclickCerr (View view){
+        Intent intent = new Intent(this, segundoActivity.class);
+        this.startActivity(intent);
+    }
+
+
+
 
 
 }

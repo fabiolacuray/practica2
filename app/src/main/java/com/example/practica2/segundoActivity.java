@@ -39,19 +39,12 @@ public class segundoActivity extends AppCompatActivity {
         String nombr = nombre.getText().toString();
         String bas = base.getText().toString();
 
-        if (!nombr.matches("") && !bas.matches("")) {
-            Intent intent = new Intent(this, terceroActivity.class);
+           Intent intent = new Intent(this, terceroActivity.class);
             ////metodo para pasar
             intent.putExtra("_nombre2", nombre.getText().toString());
             intent.putExtra("_base2", base.getText().toString());
 
             startActivity(intent);
-
-        } else {
-            //mostrar un mensaje cuando este vacio
-            Toast.makeText(this, "Nombre y base son obligatorios",
-                    Toast.LENGTH_LONG).show();
-        }
 
 
     }
