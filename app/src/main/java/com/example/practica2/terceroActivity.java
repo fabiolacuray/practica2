@@ -35,7 +35,7 @@ public class terceroActivity extends AppCompatActivity {
         cerrar = findViewById(R.id.btn_cerrar);
         cerrar.setEnabled(false);
 
-        
+
     }
 
 
