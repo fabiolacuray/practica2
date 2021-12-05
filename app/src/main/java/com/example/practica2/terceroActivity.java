@@ -36,6 +36,14 @@ public class terceroActivity extends AppCompatActivity {
         cerrar.setEnabled(false);
 
 
+        /////pongo los datos del segundo////
+        Bundle datosdelsegundo = this.getIntent().getExtras();
+        String nombr = datosdelsegundo.getString("_nombre2").toUpperCase();
+        String bas = datosdelsegundo.getString("_base2");
+        nombre.setText(nombr);
+        base.setText(bas);
+
+
     }
 
 
